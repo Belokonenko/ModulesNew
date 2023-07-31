@@ -2,7 +2,8 @@ const container = document.querySelector('.pref__container')
 const slider = document.querySelector('.pref__slider');
 const slides = document.querySelectorAll('.pref__slide').length;
 const buttons = document.querySelectorAll('.pref__btn');
-
+const butLeft = document.querySelector('.pref__btn-left');
+const butRight = document.querySelector('.pref__btn-right');
 
 let currentPosition = 0;
 let currentMargin = 0;
@@ -67,8 +68,6 @@ function slideRight() {
 };
 
 function slideLeft() {
-    console.log(currentPosition);
-    console.log(slidesCount);
     if (currentPosition != slidesCount) {
         slider.style.marginLeft = currentMargin - (100 / slidesPerPage) + '%';
         currentMargin -= (100 / slidesPerPage);
@@ -81,3 +80,11 @@ function slideLeft() {
         buttons[0].classList.remove('inactive');
     }
 };
+
+butLeft.addEventListener('click', () => {
+    slideRight();
+})
+
+butRight.addEventListener('click', () => {
+    slideLeft();
+})
