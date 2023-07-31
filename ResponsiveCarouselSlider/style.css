@@ -1,4 +1,5 @@
-#container {
+
+.pref__container {
   height: 100vh;
   width: 100vw;
   margin: 0;
@@ -8,7 +9,7 @@
   place-items: center
 }
 
-#slider-container {
+.pref__slider-container {
   height: 300px;
   width: 85vw;
   max-width: 1400px;
@@ -19,7 +20,7 @@
   padding: 20px;
 }
 
-#slider-container .btn {
+.pref__slider-container .pref__btn {
   position: absolute;
   top: calc(50% - 30px);
   height: 30px;
@@ -28,32 +29,32 @@
   border-top: 8px solid pink;
 }
 
-#slider-container .btn:hover {
+.pref__slider-container .pref__btn:hover {
   transform: scale(1.2);
 }
 
-#slider-container .btn.inactive {
+.pref__slider-container .pref__btn.inactive {
   border-color: rgb(153, 121, 126)
 }
 
-#slider-container .btn:first-of-type {
+.pref__slider-container .pref__btn:first-of-type {
   transform: rotate(-45deg);
   left: 10px
 }
 
-#slider-container .btn:last-of-type {
+.pref__slider-container .pref__btn:last-of-type {
   transform: rotate(135deg);
   right: 10px;
 }
 
-#slider-container #slider {
+.pref__slider-container .pref__slider {
   display: flex;
   width: 1000%;
   height: 100%; 
   transition: all .5s;
 }
 
-#slider-container #slider .slide {
+.pref__slider-container .pref__slider .pref__slide {
   height: 90%;
   margin: auto 10px;
   background-color: #a847a4;
@@ -62,14 +63,14 @@
   place-items: center;
 }
 
-#slider-container #slider .slide span {
+.pref__slider-container .pref__slider .pref__slide span {
   color: white;
   font-size: 150px;
 }
 
 @media only screen and (min-width: 1100px) {
 
-  #slider-container #slider .slide {
+  .pref__slider-container .pref__slider .pref__slide {
     width: calc(2.5% - 20px);
   }
 
@@ -77,7 +78,7 @@
 
 @media only screen and (max-width: 1100px) {
 
-  #slider-container #slider .slide {
+  .pref__slider-container .pref__slider .pref__slide {
     width: calc(3.3333333% - 20px);
   }
 
@@ -85,7 +86,7 @@
 
 @media only screen and (max-width: 900px) {
 
-  #slider-container #slider .slide {
+  .pref__slider-container .pref__slider .pref__slide {
     width: calc(5% - 20px);
   }
 
@@ -93,7 +94,7 @@
 
 @media only screen and (max-width: 550px) {
 
-  #slider-container #slider .slide {
+  .pref__slider-container .pref__slider .pref__slide {
     width: calc(10% - 20px);
   }
 

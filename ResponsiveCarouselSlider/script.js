@@ -1,14 +1,14 @@
-var container = document.getElementById('container')
-var slider = document.getElementById('slider');
-var slides = document.getElementsByClassName('slide').length;
-var buttons = document.getElementsByClassName('btn');
+const container = document.querySelector('.pref__container')
+const slider = document.querySelector('.pref__slider');
+const slides = document.querySelectorAll('.pref__slide').length;
+const buttons = document.querySelectorAll('.pref__btn');
 
 
-var currentPosition = 0;
-var currentMargin = 0;
-var slidesPerPage = 0;
-var slidesCount = slides - slidesPerPage;
-var containerWidth = container.offsetWidth;
+let currentPosition = 0;
+let currentMargin = 0;
+let slidesPerPage = 0;
+let slidesCount = slides - slidesPerPage;
+let containerWidth = container.offsetWidth;
 var prevKeyActive = false;
 var nextKeyActive = true;
 
@@ -67,6 +67,8 @@ function slideRight() {
 };
 
 function slideLeft() {
+    console.log(currentPosition);
+    console.log(slidesCount);
     if (currentPosition != slidesCount) {
         slider.style.marginLeft = currentMargin - (100 / slidesPerPage) + '%';
         currentMargin -= (100 / slidesPerPage);
